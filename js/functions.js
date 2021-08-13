@@ -3,14 +3,20 @@
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
- * When called, the function should return a message that says hello to the passed in name.
+ * When called, the function should return a message that says hello to the passed in
+ * name.
  *
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+//I know i need a function keyword by name of sayHello(parameter){body}
 function sayHello(name){
-    return "Hello " + name;
+    return "Hello, " + name;
 }
+//test function
+console.log(sayHello("codeup"));
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -18,9 +24,10 @@ function sayHello(name){
  *
  * console.log 'helloMessage' to check your work
  */
-function helloMessage  (){
-    var helloMessage = sayHello( "Destiney")
-    console.log(helloMessage);
+
+//string literal ("") in a function
+function helloMessage (){
+    var helloMessage = sayHello( "Destiney");
 }
 console.log(helloMessage);
 
@@ -90,7 +97,7 @@ function calculateTip(x, y) {
  */
 var totalBill = prompt("How much was your bill?")
 var tipPercent = prompt("What percentage would you like to tip?") ;
-var total = confirm("Your total tip is $ " + (totalBill * (tipPercent / 100)));
+alert("Your total tip is $ " + (totalBill * (tipPercent / 100)));
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
