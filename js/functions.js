@@ -1,16 +1,17 @@
 "use strict";
 
-/**
- * TODO:
- * Create a function called 'sayHello' that takes a parameter 'name'.
- * When called, the function should return a message that says hello to the passed in
- * name.
- *
- * Example
- * > sayHello("codeup") // returns "Hello, codeup!"
- */
+// /**
+//  * TODO:
+//  * Create a function called 'sayHello' that takes a parameter 'name'.
+//  * When called, the function should return a message that says hello to the passed in
+//  * name.
+//  *
+//  * Example
+//  * > sayHello("codeup") // returns "Hello, codeup!"
+//  */
 //I know i need a function keyword by name of sayHello(parameter){body}
-function sayHello(name){
+
+function sayHello (name) {
     return "Hello, " + name;
 }
 //test function
@@ -116,6 +117,9 @@ function applyDiscount () {
     var totalDiscount = x * y;
     return total.toFixed(2);
 }
-var totalBill = prompt("How much is your total before the discount?") ;
+var origionalPrice = prompt("How much is your total before the discount?") ;
 var discountPercent = prompt("How much was the discount percentage?") ;
-var total = confirm("Your new total is $ " + (totalBill * (discountPercent / 100)));
+var total = confirm("Your new total is $ " + origionalPrice-((origionalPrice * (discountPercent / 100))));
+
+
+// function applyDiscount(origionalPrice, discountPercent){}
