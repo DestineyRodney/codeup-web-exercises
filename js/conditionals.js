@@ -71,9 +71,9 @@ switch(color){
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
-var favColor = prompt("What is your favorite color?")
-analyzeColor(favColor);
+//
+// var favColor = prompt("What is your favorite color?")
+// analyzeColor(favColor);
 /* ########################################################################## */
 
 /**
@@ -98,24 +98,24 @@ analyzeColor(favColor);
 var luckyNumber = Math.floor(Math.random() * 6);
 function calculateTotal (luckyNumber, totalAmount) {
     if (luckyNumber === 0) {
-        return totalAmount;
+        return totalAmount - 0;
     } else if (luckyNumber === 1) {
-        return totalAmount * (10/100);
+        return totalAmount - (totalAmount * (10/100));
     } else if (luckyNumber === 2) {
-        return totalAmount * (25/100);
+        return totalAmount -(totalAmount * (25/100));
     } else if (luckyNumber === 3) {
-        return totalAmount * (35/100);
+        return totalAmount -(totalAmount * (35/100));
     } else if (luckyNumber === 4) {
-        return totalAmount * (50/100);
+        return totalAmount -(totalAmount * (50/100));
     } else if (luckyNumber === 5) {
-        return totalAmount;
+        return totalAmount -totalAmount;
     } else {
-    console.log("You will not receive a discount");
+        return("You will not receive a discount");
      }
 }
 
-calculateTotal(0, 100);
-
+// calculateTotal();
+// console.log(calculateTotal(2,100));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -125,6 +125,12 @@ calculateTotal(0, 100);
  */
 // Generate a random number between 0 and 6
 
+var totalBill = parseInt(prompt("How much was your total bill?"));
+calculateTotal(luckyNumber, totalBill);
+
+alert("Your lucky number is " + luckyNumber);
+alert("Your total before the discount was $" + totalBill);
+alert("your new total is $ " + (calculateTotal(luckyNumber,totalBill)));
 
 /**
  * TODO:
@@ -142,4 +148,10 @@ calculateTotal(0, 100);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+var number = confirm("Would you like to enter your number?")
+
+var numberEntered = prompt("Enter a number");
+
+alert("Your number + 100 is " numberEntered + 100);
+alert()
 
