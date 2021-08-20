@@ -55,18 +55,38 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    var first = [1, 2, 3, 4, 5];
-    var second = [1, 2, 3, 4, 5];
-    var last = [1, 2, 3, 4, 5];
 
-    function logElements(element, index) {
-        for (var i = 0; i < array.length; i++)
-        console.log("Element " + index);
+
+   function first (number) {
+       return number[0]
+   }
+
+
+   function second (number) {
+       return number[1]
+   }
+
+    function last (number) {
+        return number(number.length - 1)
     }
-    first.forEach(logElements);
-    second.forEach(logElements);
-    last.forEach(logElements);
 
+    // first.forEach(function(element, index, array){
+    //
+    //     console.log(array[0]);
+    //
+    // });
+    //
+    // second.forEach(function(element, index, array){
+    //
+    //     console.log(array[1]);
+    //
+    // });
+    //
+    // last.forEach(function(element, index, array){
+    //
+    //     console.log(array[4]);
+    //
+    // });
 
 
 })();
