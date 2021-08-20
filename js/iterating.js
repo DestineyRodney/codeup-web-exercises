@@ -60,12 +60,12 @@
    function first (number) {
        return number[0]
    }
-
+console.log(first([1,2,3,4,5]));
 
    function second (number) {
        return number[1]
    }
-
+console.log(second([1,2,3,4,5]));
     function last (number) {
         return number(number.length - 1)
     }
