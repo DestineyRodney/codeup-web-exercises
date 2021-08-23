@@ -1,4 +1,3 @@
-console.log("OBJECTS")
 //What's going on with these objects?
 //Well: an OBJECT is a grouping of data + functionality
 //Our data. . we call properties [in a 'key:value' pair]
@@ -9,10 +8,10 @@ console.log("OBJECTS")
 var myCounty = {
     name: "Bexar",
     countySeat: "San Antonio",
-    currentPop: 2003554
+    currentPop: 2004000
 }
 
-// console.log(myCounty);
+console.log(myCounty);
 
 var myDog = {
     name: "Fenix",
@@ -20,7 +19,7 @@ var myDog = {
     breed: "Pembroke Welsh Corgi"
 }
 
-// console.log(myDog);myDog
+console.log(myDog);myDog
 
 //.log-ing the above gets us the object 'printed' or 'viewed' in the console where we can click into the object to see its shape [properties]
 
@@ -32,12 +31,22 @@ var myDog = {
 
 // We can call the 'constructor' for an object and use it to create our objects:
 
+var myObject1 = new Object();
+
+console.log(myObject1);
 
 //More often, we'll use this object literal notation structure as shown above and below:
-
+var myObject2 = {};
+console.log(myObject2);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
+// var myCar = {};
+// console.log(myCar);
+
+//
+var myCar2 = new Object();
+console.log(myCar2);
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
 /*
@@ -51,19 +60,30 @@ var myDog = {
 //Let's take myCar. . and actually line out what my car is.
 
 // We can use dot notation to do so:
-
+// myCar.make = "Chevrolet";
+// myCar.model = "Camaro";
 // Or array notation:
 
-
+// myCar["model"] = "Camaro";
 //In general, dot notation is preferred of the two notations
 //We can also set up our objects and properties/methods during object creation
 
-
+var sigOtherCar = {
+    make: "Chevrolet",
+    model: "Corvette",
+    year: 1998
+}
+console.log(sigOtherCar);
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 
 //For me? I'm missing the year for myCar so. .
+var myCar = {
+    make: "Chevrolet",
+    model: "Camaro",
+    year: 2010
+}
 
-// console.log(myCar);
+console.log(myCar);
 
 //Now I have a completed example of the myCar object - the model and make were added above in prior examples
 
@@ -78,22 +98,46 @@ var myDog = {
 
 //Let's share some information about our cars :)
     
-
+// alert("Hey, y'all I own a " + myCar.make + "" + myCar.model)
 //We can tap into our prior understanding of assigning variables thus far and assign a property to a variable:
-
+var myCarYear = myCar.year;
+// alert("Whoops, I forgot to tell yall what year my vehicle was " + myCar.year);
 //What if we wanted to create a more complicated piece of data? Perhaps a list of our cars FEATURES?
 
+myCar.features = ["heated/ventilated seats", "bluetooth", "cruise-control"];
 
 //Now we could do something like this. . a list of those features in the console
 
+// console.log(myCar["features"])
+//or
+console.log(myCar.features);
+
+//We could do something like this using for loop
+for (var i = 0;i < myCar.features.length ; i++){
+    console.log("Here's one of my car's features: " + myCar.features[i]);
+}
+
 // TODO: Add an array of features that your vehicle has!
+
+// myCar.features = ["heated/ventilated seats", "bluetooth", "cruise-control"];
 
 //I already added an array of features above in the lecture, so I'm good to go.
 
 //What about who owns our car? That could be an object itself if we think it through - the owner has a firstName and a lastName at the very least, right?
-//Let's try nesting this object inside of our car object we've been building out
+var carOwner = {
+    firstName: "Destiney",
+    lastName: "Rodney",
+    age: 25,
+    zipCode: 78249,
+    contactPhone: "mobile",
+    phoneNumber: 2109929180
+}
 
-// TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
+//Let's try nesting this object inside of our car object we've been building out
+/// TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
+myCar.owner = carOwner;
+console.log(myCar);
+
 
 //An object can also contain within itself a method (function). We can set it up similarly to our properties, but with a value that is the function expression
 
