@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rework</title>
+</head>
+<body>
+    <h1> Reworked</h1>
+    <script>
+        //Question 1: You have rented some movies for your kids: The little mermaid (for 3 days),
+        // Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know yet if
+        // they're going to like it). If price for a movie per day is $3, how much will you have to pay?
+
+        // var theLittleMermaid = parseInt(prompt("How many days did you rent the Little Mermaid?"));
+        // var brotherBear = parseInt(prompt("How many days did you rent the Brother Bear?"));
+        // var hercules = parseInt(prompt("How many days did you rent the Hercules?"));
+        // totalOwed = (theLittleMermaid + brotherBear + hercules) * 3
+        // alert(totalOwed);
+
+        //Question 2: Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
+        // they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350.
+        // How much will you receive in payment for this week? You worked 10 hours for Facebook, 6 hours
+        // for Google and 4 hours for Amazon.
+
+        // var google = parseInt(prompt("How many hours did you work at Google?"));
+        // var amazon = parseInt(prompt("How many hours did you work at Amazon?"));
+        // var facebook = parseInt(prompt("How many hours did you work at Facebook?"));
+        // totalPay = ((amazon * 380) + (google * 400) + (facebook * 350));
+        // alert("Your total pay is $ " + totalPay);
+
+        //Question 3: A student can be enrolled in a class only if the class is not full and the class
+        // schedule does not conflict with her current schedule.
+
+        // var isFull = confirm("Is the class full?");
+        // var scheduleConflicts = confirm("Are there any conflicts with your schedule?");
+        // var canEnroll = (!isFull && !scheduleConflicts);
+        // alert("You can enroll in this class is a " + canEnroll + " statement.");
+
+        //Question 4: A product offer can be applied only if a person buys more than 2 items, and the offer
+        // has not expired. Premium members do not need to buy a specific amount of products.
+
+        // var offerValid = confirm("Is the offer valid?");
+        // var moreThanTwoItems = confirm("Do you have more than two items?");
+        // var premiumMember = confirm("Are you a premium member?");
+        // var canbeApplied = (moreThanTwoItems || premiumMember) && offerValid;
+        // alert("the offer can be applied is a " + canbeApplied + " statement.");
+
+        //Question 5: Create a variable that holds a boolean value for each of the following
+        // conditions:
+
+        // the password must be at least 5 characters
+        // the password must not include the username
+        // the username must be no more than 20 characters
+        // neither the username or password can start or end with whitespace
+        // var username = 'codeup';
+        // var password = 'notastrongpassword';
+        //
+        // var passwordNotTheSameAsUsername = !username;
+        // var passwordLength = password.length > 5;
+        // var usernameLength = username.length > 20;
+
+        "use strict";
+
+        /**
+         * TODO:
+         * Create a function called 'sayHello' that takes a parameter 'name'.
+         * When called, the function should return a message that says hello to the passed in name.
+         *
+         * Example
+         * > sayHello("codeup") // returns "Hello, codeup!"
+         */
+
+
+
+        function sayHello (name){
+            return "Hello, " + name;
+        }
+       console.log(sayHello("Destiney"))
+
+
+        // function sayHello (name){
+        //     return "Hello, " + name + "!";
+        // }
+        // console.log(sayHello("Destiney"));
+
+        /**
+         * TODO:
+         * Call the function 'sayHello' and pass your name as a string literal argument.
+         * Store the result of the function call in a variable named 'helloMessage'.
+         *
+         * console.log 'helloMessage' to check your work
+         */
+
+        var helloMessage = sayHello("Destiney");
+        console.log(helloMessage);
+
+        // var helloMessage = sayHello("Destiney");
+        // console.log(helloMessage);
+
+        /**
+         * TODO:
+         * Store your name as a string in a variable named 'myName', and pass that
+         * variable to the 'sayHello' function. You should see the same output in the
+         * console.
+         */
+
+        var myName = "Destiney";
+        console.log(sayHello(myName));
+
+
+        // var myName = "Destiney";
+        // console.log(sayHello(myName));
+
+// Don't modify the following line, it generates a random number between 1 and 3
+// and stores it in a variable named random
+        var random = Math.floor((Math.random() * 3) + 1);
+
+        /**
+         * TODO:
+         * Create a function called 'isTwo' that takes a number as a parameter.
+         * The function should return a boolean value based on whether or not the passed
+         * number is the number 2.
+         *
+         * Example
+         * > isTwo(1) // returns false
+         * > isTwo(2) // returns true
+         * > isTwo(3) // returns false
+         *
+         * Call the function 'isTwo' passing the variable 'random' as a argument.
+         *
+         * console.log *outside of the function* to check your work (you should see a
+         * different result everytime you refresh the page if you are using the random
+         * number)
+         */
+
+        function isTwo (number) {
+            console.log("Our number is: " + number);
+            return number === 2;
+        }
+        console.log(isTwo(random));
+
+        // function isTwo(number) {
+        //     console.log("Our number is: " + number);
+        //     return number === 2;
+        // }
+        // console.log(isTwo(random));
+
+        /**
+         * TODO:
+         * Create a function named 'calculateTip' to calculate a tip on a bill at a
+         * restaurant. The function should accept a tip percentage and the total of the
+         * bill, and return the amount to tip
+         *
+         * Examples:
+         * > calculateTip(0.20, 20) // returns 4
+         * > calculateTip(0.25, 25.50) // returns 6.375
+         * > calculateTip(0.15, 33.42) // returns 5.013
+         */
+        function calculateTip (tipPercentage, totalBill) {
+            return tipPercentage * totalBill;
+        }
+        // console.log(calculateTip(.3,200));
+
+     // function calculateTip(tipPercentage, totalBill){
+     //     return tipPercentage * totalBill;
+     //    }
+        // console.log(calculateTip(.30,100));
+
+        /**
+         * TODO:
+         * Use prompt and alert in combination with your calculateTip function to
+         * prompt the user for the bill total and a percentage they would like to tip,
+         * then display the dollar amount they should tip
+         */
+
+        // var tipPercentage = parseInt(prompt("What is the tip percentage you'd like to leave?"));
+        // var totalBill = parseInt(prompt("What is your total bill?"));
+        // alert("Your tip amount is: " + calculateTip(tipPercentage/100, totalBill))
+
+
+            // var totalBill = parseInt(prompt("How much was the total bill?"));
+            // var tipPercentage = parseInt(prompt("How much was the tip percentage?"));
+            // alert("Your tip should be: " + calculateTip(tipPercentage/100, totalBill));
+
+        /**
+         * TODO:
+         * Create a function named `applyDiscount`. This function should accept a price
+         * (before a discount is applied), and a discount percentage (a number between 0
+         * and 1). It should return the result of applying the discount to the original
+         * price.
+         *
+         * Example:
+         * > var originalPrice = 100;
+         * > var dicountPercent = .2; // 20%
+         * > applyDiscount(originalPrice, dicountPercent) // 80
+         *
+         * > applyDiscount(45.99, 0.12) // 40.4712
+         */
+        function applyDiscount (priceBeforeDiscount, discountPercentage) {
+        return priceBeforeDiscount - (priceBeforeDiscount * (discountPercentage/100));
+        }
+
+        console.log(applyDiscount(100, 20));
+
+    </script>
+</body>
+</html>
