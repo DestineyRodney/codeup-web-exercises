@@ -1,4 +1,4 @@
-(function(){
+(function() {
     "use strict";
 
     /**
@@ -30,17 +30,28 @@
     for (var i = 0; i < names.length; i += 1) {
         console.log(names[i]);
     }
+
+    // or
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-    names.forEach(function(name, index, array){
+    names.forEach(function (name, index, array) {
 
         console.log("Element " + name + " is at index " + index);
         console.log(names);
         console.log(array);
 
     });
+
+    //or
+    // names.forEach(function(array )) {
+    //     console.log(array);
+    // }
 
     /**
      * TODO:
@@ -56,18 +67,20 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
+    var num = [1, 2, 3, 4, 5];
 
-   function first (number) {
-       return number[0]
-   }
-console.log(first([1,2,3,4,5]));
+    function first(arr) {
+        return arr[0]
+    }
 
-   function second (number) {
-       return number[1]
-   }
-console.log(second([1,2,3,4,5]));
-    function last (number) {
-        return number(number.length - 1)
+    function second(arr) {
+        return arr[1]
+    }
+
+    console.log(second([1, 2, 3, 4, 5]));
+
+    function last(arr) {
+        return arr(arr.length - 1)
     }
 
     // first.forEach(function(element, index, array){
