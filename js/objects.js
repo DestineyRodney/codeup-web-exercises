@@ -49,6 +49,10 @@
         {name: 'George', amount: 320}
     ];
 
+    // function getAmountAfterDiscount(shopper){
+    //     var amountAfterDiscount = shopper.amount - shopper.amount * .12;
+    //     return amountAfterDiscount;
+
     shoppers.forEach (function(shopper) {
        if (shoppers.amount <= 200) {
             console.log(shopper.name + " will need to spend at least $200 to receive a discount.");
@@ -57,7 +61,7 @@
        }
     } )
 
-    
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -106,7 +110,10 @@
 } }
     ];
 
-    var bookshelf = 
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[0].author.lastName)
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -132,11 +139,16 @@
      *      ...
      */
 
-for (var i = 0; i < bookshelf.length; i++){
-    console.log("Take a look at a book from my collection " + bookshelf.length[i])
-}
+// for (var i = 0; i < bookshelf.length; i++){
+//     console.log("Take a look at a book from my collection " + bookshelf.length[i])
+// }
 
+    books.forEach(function(book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author " + book.author.firstName + " " + book.author.lastName);
 
+    })
 
 
 
@@ -152,4 +164,25 @@ for (var i = 0; i < bookshelf.length; i++){
      *   `showBookInfo` function.
      */
 
-})();
+    function createBook(title, name){
+        var nameArr = name.split(" ");
+        var firstName = nameArr[0];
+        var lastName = nameArr[1];
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName,
+            }
+        }
+    }
+    var books = {
+        createBook("The Hate They Give", Angie Thomas),
+        createBook()
+}
+
+    function showBookInfo(book) {
+        console.log("Title " + book.title);
+        console.log("Author " + book.author.firstName + " " + book.author.lastName);
+    }
+})()
