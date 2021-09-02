@@ -1,5 +1,6 @@
 function tellFortune (numChildren, partnerName, location, jobTitle) {
-    return "You will be a " + jobTitle + " in " + location + ", and married to " + partnerName + " with " + numChildren + " kids."
+    var output = "You will be a " + jobTitle + " in " + location + ", and married to " + partnerName + " with " + numChildren + " kids.";
+    return output;
 }
 
 console.log(tellFortune(3, "tK", "Italy", "Designer"));
