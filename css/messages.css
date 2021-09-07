@@ -7,6 +7,7 @@ body, html {
 }
 
 #box1 {
+    border: 1px solid lightgray;
     margin: 10px;
     background-color: #cddfff;
     height:20px;
@@ -21,6 +22,7 @@ body, html {
 }
 
 #box2 {
+    border: 1px solid lightgray;
     margin: 10px;
     background-color: #cff3da;
     height:20px;
@@ -36,6 +38,7 @@ body, html {
 }
 
 #box3 {
+    border: 1px solid lightgray;
     margin: 10px;
     background-color: #fdfbc9;
     height:20px;
@@ -51,6 +54,7 @@ body, html {
 }
 
 #box4 {
+    border: 1px solid lightgray;
     margin: 10px;
     background-color: #fcd2d7;
     height:20px;
