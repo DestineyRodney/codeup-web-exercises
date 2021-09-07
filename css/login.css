@@ -25,6 +25,7 @@ fieldset {
     /* It should have no border */
     /* Its background should be white */
     padding: 1em;
+    border: 0;
     background-color: white;
 }
 
@@ -34,7 +35,7 @@ fieldset {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-
+    /*margin: 0 auto;*/
 }
 
 .form-group {
@@ -43,6 +44,7 @@ fieldset {
     width: 100%;
     margin-top: .5em;
     margin-bottom: .5em;
+    /*margin: .5em 0; */
 }
 
 .form-label {
@@ -63,7 +65,7 @@ fieldset {
     padding: 8px;
     color: white;
     font-weight: bold;
-    border: lightgray 1px;
+    border: lightgray solid 1px;
 }
 
 .form-control {
@@ -74,7 +76,7 @@ fieldset {
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+    /*width: 100%;*/
     width: calc(100% - 4px);
     padding-top: 4px;
     padding-bottom: 4px;
