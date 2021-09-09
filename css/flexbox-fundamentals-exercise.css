@@ -17,8 +17,6 @@ h2, h3 {
 .container {
     margin: 0 auto;
     width: 80%;
-        /*display: flex;*/
-        /*flex-direction: column;*/
 }
 
 .green-box {
@@ -35,19 +33,27 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     /* enter needed declarations here */
 }
 
 section {
+    display: flex;
+    flex-wrap: wrap;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+    justify-content: space-between;
+    align-items: center;
     /* enter needed declarations here */
 }
 section:nth-of-type(1) div:last-child {
+    align-self: flex-start;
     /* enter needed declarations here */
 }
 
@@ -58,10 +64,13 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
+    flex-grow: 2;
     /* enter needed declarations here */
 }
 
 .purple-box:nth-of-type(2) {
+    /*flex-grow: initial;*/
+    flex-grow: 1;
     /* enter needed declarations here */
 }
 
@@ -72,10 +81,13 @@ section:nth-of-type(1) div:last-child {
 }
 
 section:nth-of-type(3) {
+    justify-content: flex-end;
+    align-items: center;
     /* enter needed declarations here */
 }
 
 section:nth-of-type(3) h3 {
+    flex-grow: 1;
     /* enter needed declarations here */
 
 }
@@ -92,6 +104,7 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
+    flex-grow: 1;
     /* enter needed declarations here */
 }
 
@@ -100,6 +113,7 @@ section:nth-of-type(3) h3 {
 }
 
 section:nth-of-type(5) {
+    justify-content: space-evenly;
     /* enter needed declarations here */
 }
 
@@ -112,6 +126,8 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
+    align-items: center;
+    justify-content: space-between;
     /* enter needed declarations here */
 }
 
