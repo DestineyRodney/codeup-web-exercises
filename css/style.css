@@ -1,4 +1,60 @@
+h1 { text-align: center; }
+
 .fancy-header {
     color: purple;
     text-decoration: underline;
+}
+h3 {
+    color: white;
+    text-align: center;
+}
+
+ul li {
+    color: white;
+}
+
+ol li {
+    color: white;
+}
+
+h2 {
+    color: purple;
+    text-decoration: underline;
+}
+
+body {
+    background: linear-gradient(lightblue, lightpink, lightblue);
+    /*background-image: url(../img/pexels-chevanon-photography-302899.jpg);*/
+}
+
+/*body {*/
+/*    background: linear-gradient(to right, lightblue, lightpink, lightblue);*/
+/*}*/
+
+ul { list-style: square; }
+
+table { background-image: url("https://cdn.crispedge.com/d5ffff.webp");
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr td {
+    margin: 50px auto;
+    width: 475px;
+    padding: 10px;
+}
+
+a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color:purple;
 }
