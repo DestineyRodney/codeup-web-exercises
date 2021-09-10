@@ -3,7 +3,7 @@
 }
 html, body {
     margin: 0;
-    font-family: "Work Sans";
+    font-family: 'Work Sans', sans-serif;
 }
 
 nav {
@@ -26,7 +26,7 @@ ul {
     color: black;
     /*font-family: 'Work Sans';*/
     display: inline-block;
-    padding: 1em;
+    padding: 1em .5em;
     /*justify-content: space-between;*/
 }
 nav a:hover {
@@ -37,16 +37,7 @@ li:nth-of-type(4) {
     margin-right:auto;
 }
 
-/*nav li {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
 
-/*}*/
-/*.nav-item {*/
-/*    display:flex;*/
-/*    justify-content: center;*/
-
-/*}*/
 #logo{
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
