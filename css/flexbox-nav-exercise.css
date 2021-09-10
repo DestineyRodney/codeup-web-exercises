@@ -1,24 +1,30 @@
 * {
     box-sizing: border-box;
 }
-body {
+html, body {
     margin: 0;
+    font-family: "Work Sans";
 }
+
 nav {
-    background:lightgray;
+    width: 100%;
 }
+
 ul {
+    background:lightgray;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    width: 100%;
+    position: relative;
 }
 .nav-item a {
     text-decoration: none;
     color: black;
-    font-family: 'Work Sans';
+    /*font-family: 'Work Sans';*/
     display: inline-block;
     padding: 1em;
     /*justify-content: space-between;*/
@@ -27,21 +33,30 @@ nav a:hover {
     background: blue;
 }
 
-
+li:nth-of-type(4) {
+    margin-right:auto;
+}
 
 /*nav li {*/
 /*    display: flex;*/
 /*    justify-content: center;*/
 
 /*}*/
-.nav-item {
-    display:flex;
-    justify-content: center;
+/*.nav-item {*/
+/*    display:flex;*/
+/*    justify-content: center;*/
 
-}
+/*}*/
 #logo{
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     padding: .2em 0;
     margin: auto;
+}
+
+.logo-container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
