@@ -48,3 +48,41 @@ console.log(calculateDogAge(11));
 //
 // console.log(calculateDogAge(3, 7));
 
+
+// Given arrays of strings that are orders of food in string form to your function, write a function named tacoTuesday that returns TRUE or FALSE if the array provided has any element mention the word ‘taco’ in its value.
+//     var hasTacos = [“blueberry muffin”, “banana”, “yogurt”, “cereal”, “brisket and egg taco”]
+// var noTacos = [“parfait”, “omlette de frumage”, “protein shake”, “fasting”]
+// tacoTuesday(hasTacos) //true
+// tacoTuesday(noTacos) //false
+
+// var hasTacos = ["blueberry muffin", "banana", "yougurt", "cereal", "brisket and egg taco" ]
+// var noTacos = ["parfait", "omelette de frumage", "protein shake", "fasting"]
+
+// console.log(hasTacos(4).includes("taco"));
+
+
+// *Notes
+// function tacoTuesday (arr) {
+    //arrays have length < use that for my loop
+    // a FOR loop is good for set numbers of interactions
+    //for(var i = 0; i < arr.length; i++){
+    //console.log(arr[i]);
+// }
+//}
+
+var hasTacos = ["blueberry muffin", "banana", "yougurt", "cereal", "brisket and egg taco" ]
+var noTacos = ["parfait", "omelette de frumage", "protein shake", "fasting"]
+
+function tacoTuesday (arr) {
+    for(var i =0; i < arr.length; i++) {
+        if (arr[i].includes("taco")){
+            return true;
+        }
+    }
+    return false;
+
+}
+
+console.log(tacoTuesday(hasTacos));
+
+console.log(tacoTuesday(noTacos));

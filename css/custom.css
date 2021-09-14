@@ -1,6 +1,10 @@
 .jumbotron-fluid {
     background-image: url("../img/pizza.png");
 }
- {
-    opacity: 20%;
+.display-4{
+    opacity: 60%;
+}
+
+.bg-light {
+    opacity: 75%;
 }
