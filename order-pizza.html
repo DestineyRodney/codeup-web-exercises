@@ -15,7 +15,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,47 +29,47 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Menu</a>
             </li>
+            <li class="nav-item">
+                <a href=""> </a>
+            </li>
+            <li class="nav-item">
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="Search" placeholder="Zip Code" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Select stores near you</button>
+                    <button class="btn btn-outline-success text-black my-2 my-sm-0" type="submit">Select stores near you</button>
                 </form>
             </li>
         </ul>
-        <div>
             <a class="text-dark" href="#"><i class="fas fa-user"></i> Sign up</a>
-        </div>
     </div>
 </nav>
 
-<div class="container">
+<!--Jumbotron-->
+<main class="container-fluid">
+
     <div class="jumbotron jumbotron-fluid">
-<!--        <img src="img/pizza.png" alt="Pizza">-->
         <div class="container text-center bg-light text-black">
             <h1 class="display-4">Welcome to Pizza World!</h1>
         </div>
     </div>
 
     <h2>Build your own pizza!</h2>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <!--NAV TABS-->
+    <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" id="size-crust" data-toggle="tab" href="#size-crust" role="tab"
-               aria-controls="size-crust" aria-selected="true">
-                <span class="badge badge-pill badge-secondary">1</span>Size
-                and crust</a>
+            <a class="nav-link active" id="size-and-crust-tab" data-toggle="tab" href="#size-and-crust" role="tab"><span class="badge badge-pill badge-dark">1</span> Size and crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="cheese-sauce" data-toggle="tab" href="#cheese-sauce" role="tab"
-               aria-controls="cheese-sauce" aria-selected="false">
-                <span
-                    class="badge badge-pill badge-secondary">2</span>Cheese and Sauce</a>
+            <a class="nav-link" id="cheese-and-sauce-tab" data-toggle="tab" href="#cheese-and-sauce" role="tab"><span class="badge badge-pill badge-dark">2</span> Cheese and Sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings"
-               aria-selected="false">
-                <span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab"><span class="badge badge-pill badge-dark">3</span> Toppings</a>
         </li>
     </ul>
-    <!--Content-->
+    <!--TAB CONTENT-->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="size-and-crust" role="tabpanel">
+            <!--SIZE AND CRUST-->
+    <!--Size and crust Content-->
     <div class="card">
         <div class="card-body">
             <p class="bg-primary">Choose size and crust:</p>
@@ -103,7 +103,126 @@
                     </ul>
                 </form>
             </div>
+            <div class="text-right p-3 bg-light">
+                <button class="btn bg-primary text-white" type="submit">Next Step </button>
+            </div>
         </div>
+    </div>
+        </div>
+
+        <!-- Cheese and Sauce Options-->
+        <div class="tab-pane fade" id="cheese-and-sauce" role="tabpanel">
+            <div class="card">
+                <div class="card-body">
+                    <p class="bg-primary tab-card-titles">Cheese and Sauce:</p>
+                    <div class="card">
+                        <form class="list-group list-group-flush" method="post" action="https://request-inspector.glitch.me/">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">Cheese</li>
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label for="cheese-selection">How Much?</label>
+                                        <select class="form-control" id="cheese-selection">
+                                            <option>Light</option>
+                                            <option selected>Normal</option>
+                                            <option>Extra</option>
+                                            <option>Double</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <form class="list-group list-group-flush" method="post" action="https://request-inspector.glitch.me/">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">Sauce</li>
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label for="sauce-selection">What Type?</label>
+                                        <select class="form-control" id="sauce-selection">
+                                            <option selected>Tomato sauce</option>
+                                            <option>Marinara sauce>Normal</option>
+                                            <option>BBQ sauce</option>
+                                            <option>Alfredo sauce</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-group">
+                                        <label for="sauce-qnty-selection">How Much?</label>
+                                        <select class="form-control" id="sauce-qnty-selection">
+                                            <option>Light</option>
+                                            <option selected>Normal</option>
+                                            <option>Extra</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <!--BUTTON GROUP-->
+                    <footer class="text-right p-3 bg-light btn-group d-flex justify-content-end">
+                        <div class="btn-group">
+                            <button class="btn bg-primary text-white" type="submit">< Previous Step</button>
+                            <button class="btn bg-primary text-white" type="submit">Next Step ></button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!--Pizza Toppings-->
+        <div class="tab-pane fade" id="toppings" role="tabpanel">
+            <div class="card">
+                <div class="card-body">
+                    <p class="bg-primary tab-card-titles">Choose Toppings:</p>
+                    <div class="card">
+                        <form class="list-group list-group-flush" method="post" action="https://request-inspector.glitch.me/">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">Choose Meats</li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="meat" id="beef"><label for="beef">Beef</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="meat" id="ham"><label for="ham">Ham</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="meat" id="philly-steak"><label for="philly-steak">Philly Steak</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="meat" id="bacon"><label for="bacon">Bacon</label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <form class="list-group list-group-flush" method="post" action="https://request-inspector.glitch.me/"> <!--NEED AN ACTION!-->
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-light">Choose Non-Meats</li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="non-meat" id="green-peppers"><label for="green-peppers">Green Peppers</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="non-meat" id="mushrooms"><label for="mushrooms">Mushrooms</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="non-meat" id="onions"><label for="onions">Onions</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" name="non-meat" id="jalapeno-peppers"><label for="jalapeno-peppers">Jalapeño Peppers</label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="text-right p-3 bg-light">
+                        <button class="btn bg-primary text-white" type="submit"><i class="fas fa-shopping-cart"></i> Checkout</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Optional JavaScript; choose one of the two! -->
 
