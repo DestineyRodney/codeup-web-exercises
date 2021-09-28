@@ -86,3 +86,33 @@ function tacoTuesday (arr) {
 console.log(tacoTuesday(hasTacos));
 
 console.log(tacoTuesday(noTacos));
+
+
+// function logEvenets(num) {
+//     for (var i = 0; i <= num; i++) {
+//         if (i % 2 === 0 && )
+//     }
+// }
+
+// Function logNum
+// Write a function called lognum that takes in a number parameter indicicationg the number of times to LOG number up to what was provided. LogNum
+
+function logNum (num) {
+    for(var i = 0; i <=num; i++)
+    if (Math.log(num) % 2 === 0) {
+        return 'The' + num + 'is even';
+    }else if {
+        return 'The' + num + 'is odd';
+    }
+}
+
+console.log(logNum(10));
+
+function logNum (num) {
+    for(var i = 0; i <=num; i++)
+        if (i % 2 === 0) {
+            console.log( 'The' + num + 'is even');
+        }else if (i % 2 !== 0) {
+            console.log( 'The' + num + 'is odd') ;
+        }
+            }
