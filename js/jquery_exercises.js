@@ -19,11 +19,33 @@
 
 // Exercise pt. 3
 
-$('li').css('font-size', '20px');
-$('h1, p, li').css('background-color', 'yellow');
+// $('li').css('font-size', '20px');
+// $('h1, p, li').css('background-color', 'yellow');
+//
+// var content = $('h1').html();
+// alert(content);
 
-var content = $('h1').html();
-alert(content);
+// Exercise Pt. 3 Mouse Click
 
+$('h1').click(
+    function() {
+        $(this).css('background-color', 'red');
+    }
+);
+
+$('p').dblclick(
+    function() {
+        $(this).css('font-size', '18px');
+    }
+);
+
+$('li').hover(
+    function() {
+        $(this).css('color', 'red');
+    },
+    function() {
+        $(this).css('color', 'black');
+    }
+);
 
 
