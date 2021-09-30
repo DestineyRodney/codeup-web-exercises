@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lemurs</title>
+    <style>
+        .visibility {
+            visibility: hidden;
+        }
+        .highlight {
+            background-color: #FF0;
+        }
+    </style>
+</head>
+<body>
+
+<p>Lemur FAQs:</p>
+
+<dl>
+    <dt>Ring-tailed Lemur</dt>
+    <dd>The ring tailed lemur's tail is longer than its body!</dd>
+
+    <dt>Red Ruffed Lemur</dt>
+    <dd>Red ruffed lemurs have six bottom teeth known as a “tooth comb”. They use it to groom, or comb, their fur and to help pull the skin off fruit..</dd>
+
+    <dt>Mongoose Lemur</dt>
+    <dd>This lemur weighs only about three to four pounds.</dd>
+
+    <dt>Red-bellied Lemur</dt>
+    <dd>Although they are named red-bellied, it is only the males who have this feature, the females have a white underbelly.</dd>
+
+    <dt>Silky Sifaka Lemur</dt>
+    <dd>This lemur has a creamy white coat, due to which these animals are otherwise called 'angels of the forest'.</dd>
+
+    <dt>White-fronted Brown Lemur</dt>
+    <dd>They are cathemeral, which means that these animals are active at varying times throughout the day and night.</dd>
+
+    <dt>Northern Bamboo Lemur</dt>
+    <dd>heir noses and faces are smaller than many other lemurs.</dd>
+
+    <dt>Mittermeier’s Mouse Lemur</dt>
+    <dd>Mittermeier's mouse lemur is the smallest of the east coast mouse lemurs</dd>
+
+    <dt>Black Lemur</dt>
+    <dd class="invisible">The black lemur lives in groups of 2 to 15 members, including approximately equal numbers of males and females.</dd>
+
+    <dt>Indri</dt>
+    <dd>The indri is a vertical clinger and leaper and thus holds its body upright when traveling through trees or resting in branches.</dd>
+</dl>
+
+<a href="#" id="visible">Click to toggle</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script>
+    'use strict'
+    $(document).ready(function() {
+        $('dd').addClass('invisible');
+
+        // $('.invisible').css('visibility', 'hidden');
+
+        $('#visible').click(function (event) {
+            event.preventDefault();
+            $('.invisible').toggleClass('visibility');
+        });
+
+    });
+
+    $('dt').click(function (event) {
+        event.preventDefault();
+        $(this).toggleClass('highlight');
+    });
+
+</script>
+</body>
+</html>
