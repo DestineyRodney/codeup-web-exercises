@@ -10,11 +10,18 @@
         .highlight {
             background-color: #FF0;
         }
+        html {
+            background: linear-gradient(gray, white, white, gray);
+        }
+
+        h2{
+            margin: auto;
+        }
     </style>
 </head>
 <body>
 
-<p>Lemur FAQs:</p>
+<h2>Lemur FAQs:</h2>
 
 <dl>
     <dt>Ring-tailed Lemur</dt>
@@ -50,7 +57,34 @@
 
 <a href="#" id="visible">Click to toggle</a>
 
+
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<ul>
+    <h3>Ring-Tailed Lemur Additional Facts</h3>
+    <li>Male ring tailed lemurs put smells, from glands in their bottoms, on their tail and wave it at rivals. It’s known as ‘stink fighting’!</li>
+    <li>The ring tailed lemur is used as a symbol for Madagascar and for endangered animals on the island, because it’s so well-known.</li>
+    <li>King Julien, the most famous ring tailed lemur, likes to move it, move it!</li>
+    <li>Endangered</li>
+</ul>
+<ul>
+    <h3>Red Ruffed Lemur Additional Facts</h3>
+    <li>Red ruffed lemurs love fruit. But they love figs the best. They will even fight over them!</li>
+    <li>Red ruffed lemurs have a long claw on the second toe of their back leg which they use for brushing their fluffy coats.</li>
+    <li>Red ruffed lemurs are one of the biggest primates living on Madagascar.
+    </li>
+    <li>Endangered</li>
+</ul>
+
+<ul>
+    <h3>Mongoose Lemur Additional Facts</h3>
+    <li>Live in pairs with offspring</li>
+    <li>Reach sexual maturity in 2 years</li>
+    <li>At sexual maturity (2.5-3.5 years old), offspring are encouraged to leave the family group by the parents. </li>
+    <li>Gestation: 126 days</li>
+</ul>
+
+<button id="lastli">Change Last list Item To Yellow</button>
 
 <script>
     'use strict'
@@ -70,6 +104,42 @@
         event.preventDefault();
         $(this).toggleClass('highlight');
     });
+
+    // Transversing
+
+    $('#lastli').click(function(){
+        $('ul').each(function(index, element){
+            $(element).children().last().css('background', 'yellow')
+        })
+    })
+
+    // Review
+    // $('#lastli').click(function(event){
+    //     event.preventDefault();
+    //     $('ul').each(function(){
+    //         $(this).children().last().css('background', 'yellow')
+    //     })
+    // })
+
+    $("h3").click(function(event){
+        $(this).nextAll().css("font-weight", "bold");
+    });
+
+    // Review
+    // $("h3").click(function(event){
+    //     event.preventDefault();
+    //     $(this).next().css("font-weight", "bold");
+    // });
+
+    $("li").click(function(){
+        $(this).parent().children("li").first().css("color", "blue");
+    });
+
+    // Review
+    // $("li").click(function(event){
+    //     event.preventDefault();
+    //     $(this).parent().children().first().css("color", "blue");
+    // });
 
 </script>
 </body>
