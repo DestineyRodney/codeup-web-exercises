@@ -38,6 +38,22 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+    // $('#myTable').append('<tr><td>my data</td><td>more data</td></tr>');
+
+    function retrieveData(){
+        $.get("/data/inventory.json").done(function(data){
+            data.forEach(function(tool){
+                $("#insertProducts").append("<tr>" +
+                    "<td>" + tool.title + "</td>" +
+                    "<td> " + tool.quantity + "</td>" +
+                    "<td>" + tool.price + "</td>" +
+                    "<td>" + tool.categories + "</td>" +
+                    "</tr>");
+            });
+        });
+    }
+
+    retrieveData();
 })();
 </script>
 
