@@ -7,7 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
-<ul>
+<ul id="ul">
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
     <li data-dbid="3">Item 3</li>
@@ -30,10 +30,10 @@
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header") ;
-        console.log("mainHeader");
+        // console.log("mainHeader");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-         mainHeader.innerHTML = "Javascript is Cool";
+        //  mainHeader.innerHTML = "Javascript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
@@ -63,7 +63,31 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "Mission Accomplished!";
+
+
+        // Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+
+
+//    Main Header
+
+        var mainHeaderBttn = document.querySelector("#main-header");
+        var changeToMainHeader = function () {
+            mainHeader.innerHTML = "Javascript is Cool";
+        }
+        mainHeaderBttn.addEventListener("click", changeToMainHeader);
+
+//  sub-Header
+
+        var subHeaderBttn = document.querySelector("#sub-header");
+        var changeToSubHeader = function () {
+            subHeader.innerHTML = "Javascript is Cool";
+        }
+        subHeaderBttn.addEventListener("click", changeToSubHeader);
+
+
     })();
+
+
 </script>
 </body>
 </html>
