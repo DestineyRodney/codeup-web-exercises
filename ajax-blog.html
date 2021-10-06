@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+<body>
+<h1> My Blog</h1>
+<div id="blog-posts"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+    'use strict'
+
+    $.ajax("data/blog.json").done(function(post, status){
+        console.log("Request status: " + status);
+
+        console.log(post);
+
+    });
+
+
+function posts (post){
+    var html = '' ;
+
+    html = html + '<h2' + post.title + '</h2>';
+    html = html + '<p>' + post.content + '</p>';
+    html = html + '<p>' + post.catrgories.join(',') + '</p>';
+    html = html + '<p>' + post.data + '</p>';
+
+    return html;
+
+    }
+    posts();
+
+    function renderPost(posts) {
+        var html = '';
+        for (var i = 0; i < posts.length; i++) {
+            html = html + renderPost(posts(i));
+        }
+    }
+
+    renderPost();
+    })();
+</script>
+</body>
+</html>
