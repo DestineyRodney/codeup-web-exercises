@@ -33,9 +33,9 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'Destiney Rodney';
-var email = 'destiney.rodney01@gmail.com';
-var languages = ['html', 'css', 'javascript',];
+const name = 'Destiney Rodney';
+const email = 'destiney.rodney01@gmail.com';
+const languages = ['html', 'css', 'javascript',];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -61,7 +61,7 @@ let names = [];
 
 
 users.forEach((user) => emails.push(user.email));
-users.forEach((user) => emails.push(user.name));
+users.forEach((user) => names.push(user.name));
 
 
 
@@ -79,7 +79,7 @@ users.forEach(function(user) {
   const{name, email, languages} = users;
 
   // TODO: rewrite the assignment below to use template strings
-  developers.push(`${name}'s email is ${email}  ${name} knows ${languages.join(', ')}`);
+  developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
 });
 
 // TODO: Use `let` for the following variable
@@ -91,10 +91,11 @@ developers.forEach(function (developer) {
   //   console.log(element);
   // }
   for (let developer of developers) {
-    console.log(developer);
+    list += `<li> ${developer} </li>`;
   }
 
   // TODO: rewrite the assignment below to use template strings
-  list += `<li> ${developer} </li>`;
+
 });
 list += '</ul>';
+// document.querySelector(${developers}).
