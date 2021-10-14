@@ -119,12 +119,29 @@ let evens = numbers.filter(function(number){
 
 console.log("es6 version of evens");
 console.log(evens)
+
+console.log("----------------");
 //TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
 let hasBuffet = favoriteRestaurants.filter(function(restaurant){
     return restaurant.restaurantFeatures.includes("buffet");
 })
 
 console.log(hasBuffet);
+
+console.log("----------------");
+
+let dineIn = myfavoriteRestaurants.filter(function(restaurant){
+    return restaurant.restaurantFeatures.includes("dine-in");
+})
+
+console.log(dineIn);
+
+console.log("----------------");
+
+let nameLessThan17 = favoriteRestaurants.filter(function (restaurant){
+    return restaurant.name.length < 17;
+})
+console.log(nameLessThan17);
 
 //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
 // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
@@ -135,13 +152,16 @@ console.log(hasBuffet);
 
 //TODO Together: Let's sum up some numbers with the .reduce() method and a number array!
 
-// let numbers = [1, 2, 3, 4, 5];
+let numbersReduce = [1, 2, 3, 4, 5];
 
 //in the past: we would have built out a loop, probably used a var of sum, and had a look inside of the loop of sum += numbers[i], spit out sum with the sum of our numbers
 
 //In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction, initialValue)
+let sum = numbersReduce.reduce((accumulation, currentNumber) => {
+    return accumulation + currentNumber;
+}, 0);
 
-
+console.log(sum);
 
 //TODO Together: Let's take a step a bit deeper with .reduce() - .reduce()'s output can take many forms and shapes. For example, let's say we wanted to have a little Javascript that would count the length of the strings in an array and return that info back to us in an object. For example: ["Codeup", "San", Antonio", "Dallas", "Quasar", Cohort", "ES6"] would get us: Object { Codeup: 6, San: 3, Antonio: 7, Dallas: 6, Quasar: 6, Cohort: 6, ES6: 3 }
 
@@ -150,7 +170,31 @@ let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"
 
 //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
 
+let strLengthObj =stringArr.reduce(function (objectProp, element){
+    objectProp[element] = element.length;
+    return objectProp;
+}, {})
 
+console.log(strLengthObj);
+
+
+let myNamesArr = ["Destiney", "Aniya", "Tk", "Elexius", "Miranda"];
+
+let myNamesArrlength = myNamesArr.reduce(function(objectProp, element){
+    objectProp[element] = element.length;
+    return objectProp;
+}, {})
+
+console.log(myNamesArrlength);
+
+
+let family = [{name: "D", age: 25}, {name: "L", age:27}, {name:"N", age: 10}];
+
+let totalAge = family.reduce(function(result, individual){
+    return result + individual.age;
+}, 0)
+
+console.log(totalAge);
 </script>
 </body>
 </html>
