@@ -61,8 +61,8 @@
 //
 // // TODO: Demonstrate Promise.all and Promise.race
 //
-// var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
-// var starWarsAPI = fetch("https://swapi.dev/api/films");
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+var starWarsAPI = fetch("https://swapi.dev/api/films");
 // //
 // // Promise.all([pokemonAPI, starWarsAPI])
 // //     .then((responses) =>{
@@ -81,3 +81,6 @@
 // Promise.race([pokemonAPI, starWarsAPI])
 //     .then((response)=>{console.log(response)})
 // //race whichever one finishes first is the one that comes back in this case pokemonAPI
+
+Promise.race([starWarsAPI, pokemonAPI])
+    .then((response) => {console.log(response.url)})

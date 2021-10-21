@@ -12,8 +12,17 @@
 
 
     <title>Weather Map</title>
+    <!--MapBox CDN Below-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
-
+    <style>
+        #map {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+    </style>
 
 <body>
 
@@ -128,7 +137,9 @@
 </div>
 
 
-
+<div id="map-container" class="d-flex align-items-center">
+    <div id="map" class="d-flex border border-dark shadow-sm"></div>
+</div>
 
 <!--scripts begin-->
 

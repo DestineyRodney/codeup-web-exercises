@@ -108,3 +108,25 @@ $("#find").click(function(e){
 
 //.toLocalString returns string with date plus time
 
+
+
+
+mapboxgl.accessToken = mapboxKey;
+console.log(mapboxKey);
+
+var map = new mapboxgl.Map(
+    {
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [-98.4861, 29.4252],
+        zoom: 10
+    }
+)
+
+
+
+var marker = new mapboxgl.Marker({color: "orange"})
+    .setLngLat([-98.4916, 29.4260])
+    .addTo(map);
+
+marker.setDraggable(true);

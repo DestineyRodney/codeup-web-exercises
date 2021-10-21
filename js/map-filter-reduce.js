@@ -86,4 +86,4 @@ let userNames = users.reduce(function(name, user){
     return name + user.name;
 }, "")
 
-console.log(userNames);
+console.log("Your Instructors are: " + userNames.split());
