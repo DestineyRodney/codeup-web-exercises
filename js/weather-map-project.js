@@ -45,6 +45,7 @@ $.get('https://api.openweathermap.org/data/2.5/weather', {
                 let iconcode = data.daily[i].weather[0].icon;
                 var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
                 //day 1
+
                 $('.icon').eq(i).attr('src', iconurl);
                 $('.dt').eq(i).html("date: " + data.daily[i].dt);
                 $('.description').eq(i).html("Weather: " + data.daily[i].weather[0].description.toUpperCase());
@@ -130,3 +131,41 @@ var marker = new mapboxgl.Marker({color: "orange"})
     .addTo(map);
 
 marker.setDraggable(true);
+
+function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    console.log(lngLat);
+
+    reverseGeocode(lngLat, mapboxKey).then(function (location) {
+        console.log(location);
+        // var location;
+        var newLocationArr = location.split(', ');
+        console.log(newLocationArr[1]);
+
+        $.get('https://api.openweathermap.org/data/2.5/onecall', {
+            appid: weatherKey,
+            lat: lngLat.lat,
+            lon: lngLat.lng,
+            exclude: "current,minutely,hourly,alerts",
+
+            units: "imperial",
+
+        }).done(function(data){
+            console.log(data);
+
+            for(let i = 0; i <= 4; i++){
+                let iconcode = data.daily[i].weather[0].icon;
+                var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+                //day 1
+                $('.icon').eq(i).attr('src', iconurl);
+                $('.dt').eq(i).html("date: " + data.daily[i].dt);
+                $('.description').eq(i).html("Weather: " + data.daily[i].weather[0].description.toUpperCase());
+                $('.temp').eq(i).html("Day Temperature: " + data.daily[i].temp.day + " °F" );
+                $('.temphl').eq(i).html("Low: " + data.daily[i].temp.min + " °F" + " High: " + data.daily[i].temp.max + " °F");
+
+                $('.wind-speed').eq(i).html(data.daily[i].wind_speed + " mph");
+            }
+        })
+    })
+}
+marker.on("dragend", onDragEnd);
